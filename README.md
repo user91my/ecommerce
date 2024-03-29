@@ -13,3 +13,9 @@ Live site URL :-
 
 - Enter the following mock credit card number to make a successful payment:-
   4242424242424242
+
+## KNOWN ISSUES/LIMITATIONS
+
+### Checkout Field - Email ("URL/checkout") :-
+
+- The Email checkout field must be filled in proper email format (i.e. xxxx@xxxx.com). Otherwise the checkout page will not redirect to the payment gateway.
