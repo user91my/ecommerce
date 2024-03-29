@@ -5,7 +5,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
+
 import path from "path";
+import { fileURLToPath } from "url";
 
 import itemsRoutes from "./routes/items.js";
 import ordersRoutes from "./routes/orders.js";
@@ -15,6 +17,11 @@ import Order from "./models/Order.js";
 import { itemData } from "./data/index.js"; // Import mock 'item' data
 
 // CONFIGURATION
+// __filename: /path/to/your/example.js
+// __dirname: /path/to/your
+const __filename = fileURLToPath(import.meta.url); // grab the full local path of the current module file (i.e. index.js).
+const __dirname = path.dirname(__filename); // extracts the file path directory from '__filename'.
+
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -27,7 +34,7 @@ app.use(cors());
 
 // ROUTES
 app.get("/", async (req, res) => res.json({ hello: "world" }));
-app.use("/assets", express.static(path.resolve("./public/assets")));
+app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 app.use("/items", itemsRoutes);
 app.use("/orders", ordersRoutes);
 
