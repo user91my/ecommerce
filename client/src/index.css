@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fauna+One&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400;500;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/*  "*" represents styling for everything  */
+* {
+  /* "box-sizing: border-box" includes the padding and border in an element's total width and height */
+  /* https://www.w3schools.com/css/css3_box-sizing.asp */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  margin: auto;
+}
