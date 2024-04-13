@@ -12,7 +12,7 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
         <TextField
           fullWidth
           type="text"
-          label="Email"
+          label="Email <Enter the proper email format (i.e. xxxx@xxxx.com)>"
           onBlur={handleBlur}
           onChange={handleChange}
           value={values.email}

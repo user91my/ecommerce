@@ -31,7 +31,7 @@ const initialValues = {
     state: "",
     zipCode: "",
   },
-  email: "",
+  email: "sample-email@email.com",
   phoneNumber: "",
 };
 
